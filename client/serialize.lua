@@ -5,6 +5,10 @@ local writestring        = buffer.writestring
 local writef32, writeu32 = buffer.writef32, buffer.writeu32
 local writeu16, writeu8  = buffer.writeu16, buffer.writeu8
 
+---- definitions ----
+
+type color = { r: number, g: number, b: number }
+
 ---- module ----
 
 local serialize = {}; do
@@ -13,22 +17,22 @@ local serialize = {}; do
     function serialize.color(
         data: buffer,
         offset: number,
-        value: vector | { r: number, g: number, b: number }
+        value: color | vector
     ): number
         local r: number
         local g: number
         local b: number
 
         if("vector" == type(value)) then
-            r = value.x
-            g = value.y
-            b = value.z
+            r = (value :: vector).x
+            g = (value :: vector).y
+            b = (value :: vector).z
         else
             assert("table" == type(value), `invalid argument #1 to 'serialize.color' (vector or table expected, got {type(value)})`)
 
-            r = value.r
-            g = value.g
-            b = value.b
+            r = (value :: color).r
+            g = (value :: color).g
+            b = (value :: color).b
         end
 
         serialize.u8(data, offset + 0, r);
