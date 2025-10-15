@@ -7,7 +7,7 @@ Download `server.exe`, run it, and then execute `client.lua`.
 # Goals
 - [ ] Terrain: not my priority, but it'd be nice to add eitherways.
 - [ ] Scripts: requires a decompiler, this is possible in the future.
-- [ ] Editable Assets: essentially the same as terrain.
+- [ ] Editable Assets: (unions, meshes) essentially the same as terrain.
 - [ ] Attributes & tags
 - [x] Parts
 - [ ] GuiObjects
