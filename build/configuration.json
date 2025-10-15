@@ -1,0 +1,9 @@
+{
+    "generator": "dense",
+    "bundle": {
+        "require_mode": "luau",
+        "excludes": [
+            "@lune/**"
+        ]
+    }
+}

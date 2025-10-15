@@ -1,6 +1,6 @@
 ---- environment ----
 
-local serialize        = loadstring(game:HttpGet "https://gist.githubusercontent.com/tzmplar/e9de2052ca2479c8a2dc343daae58c98/raw/a37ffcac797eeb8c824a182f00c314ccb2ef3d47/serialize.luau")()
+local serialize        = require("@self/serialize")
 
 local u32, u16, u8     = serialize.u32,    serialize.u16, serialize.u8
 local string, float    = serialize.string, serialize.float

@@ -4,8 +4,8 @@ local Roblox      = require "@lune/roblox"
 local network     = require "@lune/net"
 local fs          = require "@lune/fs"
 
-local deserialize = require("./deserialize")
-local base64      = require("./base64")
+local deserialize = require("@self/deserialize")
+local base64      = require("@self/base64")
 
 ---- constants ----
 
