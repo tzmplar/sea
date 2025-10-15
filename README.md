@@ -14,7 +14,7 @@ Download `server.exe`, run it, and then execute `client.lua`.
 - [ ] Lighting
 
 # Known Issues
-- [ ] Meshes are too big: this is an issue with Lune most likely, so I don't know how to fix it.
+- Meshes are too big: this is an issue with Lune most likely, so I don't know how to fix it.
 
 # Contribution
 I'd be very grateful for any contributors, so if you feel like it, you can open a pull request and detail your changes.
