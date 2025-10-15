@@ -28,7 +28,7 @@ c(l)})`)h(j,k,l)return k+1 end end return i end function a.a():typeof(__modImpl(
 end end end local b=a.a()local c,d,e=b.u32,b.u16,b.u8 local f,g=b.string,b.float
 local h,i=b.color,b.vector local j=b.cframe local k,l=memory.readu8,memory.
 readu64 local m,n=memory.readu16,memory.readf32 local o={'Part','MeshPart',
-'SpawnLocation','WedgePart','UnionPart'}local p,q=0,buffer.create(1e7)
+'SpawnLocation','WedgePart','UnionPart'}local p,q=0,buffer.create(1e9)
 local function pack(r)local s=tonumber(r.Parent and r.Parent.Data)or 0 local t=
 k(r,0x58)local u=r.ClassName p=c(q,p,s)p=f(q,p,u)p=e(q,p,t)p=c(q,p,tonumber(r.
 Data)::number)p=f(q,p,r.Name)if(table.find(o,u))then local v=r.Description local

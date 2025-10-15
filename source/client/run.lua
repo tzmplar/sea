@@ -16,7 +16,7 @@ local BasePart = { "Part", "MeshPart", "SpawnLocation", "WedgePart", "UnionPart"
 
 ---- variables ----
 
-local offset, payload = 0, buffer.create(1e7)
+local offset, payload = 0, buffer.create(1e9)
 
 ---- functions ----
 
