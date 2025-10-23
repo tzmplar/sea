@@ -1,1 +1,138 @@
-{"Animation":{"AnimationId":204},"Atmosphere":{"Color":208,"Decay":220,"Density":232,"Glare":236,"Haze":240,"Offset":244},"Bloom":{"Intensity":208,"Size":212,"Threshold":216},"Blur":{"Size":208},"BodyColors":{"HeadColor3":276,"LeftArmColor3":236,"LeftLegColor3":252,"RightArmColor3":212,"RightLegColor3":304,"TorsoColor3":224},"ClickDetector":{"CursorIcon":220,"MaxActivationDistance":256},"Decal":{"Color3":512,"TextureId":404,"Transparency":552,"ZIndex":556},"Frame":{"BackgroundColor3":1272,"BackgroundTransparency":1324,"BorderColor3":1300,"BorderSizePixel":1332,"LayoutOrder":1348},"Graphic":{"Color3":256,"Graphic":220},"Highlight":{"Adornee":208,"FillColor":224,"FillTransparency":252,"OutlineColor":236,"OutlineTransparency":260},"Humanoid":{"CameraOffset":320,"DisplayName":204,"Health":404,"HealthDisplayDistance":408,"HipHeight":416,"JumpHeight":428,"JumpPower":432,"MaxHealth":436,"MaxSlopeAngle":440,"NameDisplayDistance":444,"TargetPoint":356,"WalkSpeed":468,"WalkToPoint":380},"Instance":{"Name":124,"OnDemand":56,"Parent":80},"Lighting":{"Ambient":216,"Brightness":288,"ClockTime":440,"ColorShift_Bottom":228,"ColorShift_Top":240,"EnvironmentDiffuseScale":292,"EnvironmentSpecularScale":296,"ExposureCompensation":300,"FogColor":252,"FogEnd":308,"FogStart":312,"GeographicLatitude":400,"OutdoorAmbient":264,"ShadowSoftness":320},"Model":{"Scale":340},"PVInstance":{"Binding":336,"Primitive":328},"Pants":{"Color3":296,"PantsTemplate":220},"Part":{"Color":404,"Reflectance":236,"Transparency":240},"PointLight":{"Brightness":228,"Color":216,"Range":248},"Primitive":{"Material":606,"Size":460},"ProximityPrompt":{"ActionText":204,"Exclusivity":312,"GamepadKeyCode":316,"HoldDuration":320,"KeyboardKeyCode":324,"MaxActivationDistance":328,"MaxIndicatorDistance":332,"ObjectText":236},"ScreenGui":{"DisplayOrder":224},"Shirt":{"Color3":296,"ShirtTemplate":260},"Sky":{"MoonAngularSize":540,"MoonTextureId":212,"SkyboxBk":252,"SkyboxDn":292,"SkyboxFt":332,"SkyboxLf":372,"SkyboxRt":412,"SkyboxUp":452,"StarCount":544,"SunAngularSize":548},"SpotLight":{"Angle":248,"Brightness":228,"Color":216,"Range":256},"SunRays":{"Intensity":208,"Spread":212},"SurfaceAppearance":{"Color":648,"ColorMap":220,"MetalnessMap":316,"NormalMap":364,"RoughnessMap":412},"SurfaceLight":{"Angle":248,"Brightness":228,"Color":216,"Range":256},"TextLabel":{"Text":3572,"TextColor3":3752,"TextSize":3796,"TextStrokeColor3":1292,"TextStrokeTransparency":3800,"TextTransparency":3804},"Texture":{"Color3":512,"OffsetStudsU":636,"OffsetStudsV":632,"StudsPerTileU":624,"StudsPerTileV":628,"TextureId":404,"Transparency":552,"ZIndex":556}}
+{
+  "Animation": { "AnimationId": 204 },
+  "Atmosphere": {
+    "Color": 208,
+    "Decay": 220,
+    "Density": 232,
+    "Glare": 236,
+    "Haze": 240,
+    "Offset": 244
+  },
+  "Bloom": { "Intensity": 208, "Size": 212, "Threshold": 216 },
+  "Blur": { "Size": 208 },
+  "BodyColors": {
+    "HeadColor3": 276,
+    "LeftArmColor3": 236,
+    "LeftLegColor3": 252,
+    "RightArmColor3": 212,
+    "RightLegColor3": 304,
+    "TorsoColor3": 224
+  },
+  "ClickDetector": { "CursorIcon": 220, "MaxActivationDistance": 256 },
+  "Decal": {
+    "Color3": 512,
+    "TextureId": 404,
+    "Transparency": 552,
+    "ZIndex": 556
+  },
+  "Frame": {
+    "BackgroundColor3": 1272,
+    "BackgroundTransparency": 1324,
+    "BorderColor3": 1300,
+    "BorderSizePixel": 1332,
+    "LayoutOrder": 1348
+  },
+  "Graphic": { "Color3": 256, "Graphic": 220 },
+  "Highlight": {
+    "Adornee": 208,
+    "FillColor": 224,
+    "FillTransparency": 252,
+    "OutlineColor": 236,
+    "OutlineTransparency": 260
+  },
+  "Humanoid": {
+    "CameraOffset": 320,
+    "DisplayName": 204,
+    "Health": 404,
+    "HealthDisplayDistance": 408,
+    "HipHeight": 416,
+    "JumpHeight": 428,
+    "JumpPower": 432,
+    "MaxHealth": 436,
+    "MaxSlopeAngle": 440,
+    "NameDisplayDistance": 444,
+    "TargetPoint": 356,
+    "WalkSpeed": 468,
+    "WalkToPoint": 380
+  },
+  "Instance": { "Name": 124, "OnDemand": 56, "Parent": 80 },
+  "Lighting": {
+    "Ambient": 216,
+    "Brightness": 288,
+    "ClockTime": 440,
+    "ColorShift_Bottom": 228,
+    "ColorShift_Top": 240,
+    "EnvironmentDiffuseScale": 292,
+    "EnvironmentSpecularScale": 296,
+    "ExposureCompensation": 300,
+    "FogColor": 252,
+    "FogEnd": 308,
+    "FogStart": 312,
+    "GeographicLatitude": 400,
+    "OutdoorAmbient": 264,
+    "ShadowSoftness": 320
+  },
+  "Model": { "Scale": 340 },
+  "PVInstance": { "Binding": 336, "Primitive": 328 },
+  "Pants": { "Color3": 296, "PantsTemplate": 220 },
+  "Part": { "Color": 404, "Reflectance": 236, "Transparency": 240 },
+  "PointLight": { "Brightness": 228, "Color": 216, "Range": 248 },
+  "Primitive": { "Material": 606, "Size": 460 },
+  "ProximityPrompt": {
+    "ActionText": 204,
+    "Exclusivity": 312,
+    "GamepadKeyCode": 316,
+    "HoldDuration": 320,
+    "KeyboardKeyCode": 324,
+    "MaxActivationDistance": 328,
+    "MaxIndicatorDistance": 332,
+    "ObjectText": 236
+  },
+  "ScreenGui": { "DisplayOrder": 224 },
+  "Shirt": { "Color3": 296, "ShirtTemplate": 260 },
+  "Sky": {
+    "MoonAngularSize": 540,
+    "MoonTextureId": 212,
+    "SkyboxBk": 252,
+    "SkyboxDn": 292,
+    "SkyboxFt": 332,
+    "SkyboxLf": 372,
+    "SkyboxRt": 412,
+    "SkyboxUp": 452,
+    "StarCount": 544,
+    "SunAngularSize": 548
+  },
+  "SpotLight": { "Angle": 248, "Brightness": 228, "Color": 216, "Range": 256 },
+  "SunRays": { "Intensity": 208, "Spread": 212 },
+  "SurfaceAppearance": {
+    "Color": 648,
+    "ColorMap": 220,
+    "MetalnessMap": 316,
+    "NormalMap": 364,
+    "RoughnessMap": 412
+  },
+  "SurfaceLight": {
+    "Angle": 248,
+    "Brightness": 228,
+    "Color": 216,
+    "Range": 256
+  },
+  "TextLabel": {
+    "Text": 3572,
+    "TextColor3": 3752,
+    "TextSize": 3796,
+    "TextStrokeColor3": 1292,
+    "TextStrokeTransparency": 3800,
+    "TextTransparency": 3804
+  },
+  "Texture": {
+    "Color3": 512,
+    "OffsetStudsU": 636,
+    "OffsetStudsV": 632,
+    "StudsPerTileU": 624,
+    "StudsPerTileV": 628,
+    "TextureId": 404,
+    "Transparency": 552,
+    "ZIndex": 556
+  }
+}

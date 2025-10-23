@@ -1,7 +1,7 @@
 ---- environment ----
 
 local serialize        = require("@self/serialize")
-local offsets          = crypt.json.decode(crypt.base64.decode(require("@self/offsets.txt")))
+local offsets          = crypt.json.decode(game:HttpGet("https://raw.githubusercontent.com/tzmplar/sea/refs/heads/main/offsets.json"))
 
 local u32, u16, u8     = serialize.u32,    serialize.u16, serialize.u8
 local string, float    = serialize.string, serialize.float
@@ -45,22 +45,22 @@ local function pack(Object)
             LookVector = Object.LookVector,
             RightVector = Object.RightVector,
             UpVector = Object.UpVector,
-        })                                                                    -- CFrame
+        })                                                                            -- CFrame
 
-        offset = vector(payload, offset, description.Size)                    -- Size
-        offset = u16(payload, offset, readu16(primitive, 0x246))              -- Material
-        offset = float(payload, offset, readf32(Object, 0xEC))                -- Reflectance
-        offset = float(payload, offset, description.Transparency)             -- Transparency
-        offset = u8(payload, offset, readu8(primitive, 0xBA))                 -- Anchored
-        offset = u8(payload, offset, readu8(Object, 0xF5))                    -- CastShadow
-        offset = u8(payload, offset, readu8(Object, 0xF7))                    -- Massless
-        offset = u8(payload, offset, readu8(Object, 0xF6))                    -- Locked
+        offset = vector(payload, offset, description.Size)                            -- Size
+        offset = u16(payload, offset, readu16(primitive, offsets.Primitive.Material)) -- Material
+        offset = float(payload, offset, readf32(Object, offsets.Part.Reflectance)   ) -- Reflectance
+        offset = float(payload, offset, description.Transparency)                     -- Transparency
+        offset = u8(payload, offset, readu8(primitive, 0xBA))                         -- Anchored
+        offset = u8(payload, offset, readu8(Object, 0xF5))                            -- CastShadow
+        offset = u8(payload, offset, readu8(Object, 0xF7))                            -- Massless
+        offset = u8(payload, offset, readu8(Object, 0xF6))                            -- Locked
     end
 
     if(class == "MeshPart") then
         offset = string(payload, offset, Object.MeshId)                       -- MeshId
         offset = string(payload, offset, Object.TextureId)                    -- TextureId
-        offset = vector(payload, offset, readvector(Object, 0x248))           -- MeshSize
+        offset = vector(payload, offset, readvector(Object, 0x220))           -- MeshSize
     end
 
     local children = Object:GetChildren(); do

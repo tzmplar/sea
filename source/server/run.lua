@@ -100,7 +100,7 @@ local function unpack(data: buffer): (number, Roblox.Instance?)
 
         if string.match(mesh, "^http") or string.match(mesh, "^rbxassetid://") then
             Instance.MeshId = mesh
-            Instance.InitialSize = init
+            Instance.InitialSize = Roblox.Vector3.new(init.x, init.y, init.z)
         end
 
         if string.match(texture, "^http") or string.match(texture, "^rbxassetid://") then
