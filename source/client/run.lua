@@ -1,6 +1,7 @@
 ---- environment ----
 
 local serialize        = require("@self/serialize")
+local offsets          = crypt.json.decode(crypt.base64.decode(require("@self/offsets.txt")))
 
 local u32, u16, u8     = serialize.u32,    serialize.u16, serialize.u8
 local string, float    = serialize.string, serialize.float
@@ -9,6 +10,7 @@ local cframe           = serialize.cframe
 
 local readu8, readu64  = memory.readu8,  memory.readu64
 local readu16, readf32 = memory.readu16, memory.readf32
+local readvector       = memory.readvector
 
 ---- constants ----
 
@@ -33,7 +35,7 @@ local function pack(Object)
 
     if(table.find(BasePart, class)) then
         local description = Object.Description
-        local primitive = readu64(Object, 0x170)
+        local primitive = readu64(Object, offsets.PVInstance.Primitive)
 
         offset = u8(payload, offset, if description.CanCollide then 1 else 0) -- CanCollide
         offset = color(payload, offset, description.Color3)                   -- Color3
@@ -58,6 +60,7 @@ local function pack(Object)
     if(class == "MeshPart") then
         offset = string(payload, offset, Object.MeshId)                       -- MeshId
         offset = string(payload, offset, Object.TextureId)                    -- TextureId
+        offset = vector(payload, offset, readvector(Object, 0x248))           -- MeshSize
     end
 
     local children = Object:GetChildren(); do
@@ -77,7 +80,7 @@ pack(game)
 
 local Connection = WebsocketClient.new("ws://localhost:8008"); do
     assert(Connection, "failed to connect to server")
-    
+
     local actual = buffer.tostring(payload):sub(1, offset)
     Connection:Send(crypt.base64.encode(actual), true)
 

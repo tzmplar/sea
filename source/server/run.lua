@@ -96,9 +96,11 @@ local function unpack(data: buffer): (number, Roblox.Instance?)
         local mesh, texture
         offset, mesh      = deserialize.string(data, offset)
         offset, texture   = deserialize.string(data, offset)
+        offset, init      = deserialize.vector(data, offset)
 
         if string.match(mesh, "^http") or string.match(mesh, "^rbxassetid://") then
             Instance.MeshId = mesh
+            Instance.InitialSize = init
         end
 
         if string.match(texture, "^http") or string.match(texture, "^rbxassetid://") then
@@ -109,11 +111,11 @@ local function unpack(data: buffer): (number, Roblox.Instance?)
     local count
     offset, count = deserialize.u32(data, offset)
     assert(count <= 100000, `child count too high: {count} for {class} '{name}'`)
-    
+
     for i = 1, count do
         local child
         offset, child = unpack(data)
-        
+
         if(Success and Instance and child) then
             child.Parent = Instance
         end

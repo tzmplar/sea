@@ -76,12 +76,13 @@ r,q.g,q.b)o.Velocity=b.Vector3.new(r.x,r.y,r.z)o.CFrame=reconstruct(s.Position,s
 .RightVector,s.UpVector,s.LookVector)o.Size=b.Vector3.new(t.x,t.y,t.z)if(type(u)
 =='userdata')then o.Material=u end o.Reflectance=v o.Transparency=w o.Anchored=(
 x==1)o.CastShadow=(y==1)o.Massless=(z==1)o.Locked=(A==1)end if k=='MeshPart'then
-local p,q i,p=e.string(j,i)i,q=e.string(j,i)if string.match(p,'^http')or string.
-match(p,'^rbxassetid://')then o.MeshId=p end if string.match(q,'^http')or string
-.match(q,'^rbxassetid://')then o.TextureID=q end end local p i,p=e.u32(j,i)
-assert(p<=100000,`child count too high: {p} for {k} '{m}'`)for q=1,p do local r
-i,r=unpack(j)if(n and o and r)then r.Parent=o end end return i,if n then o else
-nil end c.serve(8008,{handleWebSocket=function(j)local k=buffer.tostring(f.
-decode(buffer.fromstring(j:next())))print(`received payload ({#k} bytes)`)_,h=
-unpack(buffer.fromstring(k))d.writeFile('DataModel.rbxl',b.serializePlace(h))
-print'done'end})print(`serving on ws://localhost:8008`)
+local p,q i,p=e.string(j,i)i,q=e.string(j,i)i,init=e.vector(j,i)if string.match(
+p,'^http')or string.match(p,'^rbxassetid://')then o.MeshId=p o.InitialSize=init
+end if string.match(q,'^http')or string.match(q,'^rbxassetid://')then o.
+TextureID=q end end local p i,p=e.u32(j,i)assert(p<=100000,`child count too high: {
+p} for {k} '{m}'`)for q=1,p do local r i,r=unpack(j)if(n and o and r)then r.
+Parent=o end end return i,if n then o else nil end c.serve(8008,{handleWebSocket
+=function(j)local k=buffer.tostring(f.decode(buffer.fromstring(j:next())))print(
+`received payload ({#k} bytes)`)_,h=unpack(buffer.fromstring(k))d.writeFile(
+'DataModel.rbxl',b.serializePlace(h))print'done'end})print(`serving on ws://localhost:8008`
+)
